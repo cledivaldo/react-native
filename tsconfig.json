@@ -1,6 +1,23 @@
+// tsconfig.json
 {
   "extends": "expo/tsconfig.base",
-  "compilerOptions": {
-    "strict": true
-  }
+   "compilerOptions": {
+    "target": "esnext",
+    "lib": ["esnext", "DOM" ],
+    "jsx": "react-native",
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": "./",   // Adicionando o baseUrl
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*", "react-native-vector-icons.d.ts"
+  ]
 }
